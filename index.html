@@ -224,6 +224,8 @@
 	  </script>
 	  </body>
 </html>
+
+
 <style>/* Global Style */
 
 	body {
@@ -603,4 +605,57 @@
 	footer .social li a:hover {
 		color: #ffc107; /* change to your preferred hover color */
 	}
+	.dark-theme {
+  background-color: #e4dddd; /* Dark background color */
+  color: #1b1c1e; /* White text color */
+}
+
+.dark-theme .portfolio-container {
+  background-color: #444; /* Darker background color for container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .column {
+  background-color: #555; /* Dark background color for columns */
+  border: 1px solid #666;
+}
+
+.dark-theme .column img {
+  filter: brightness(0.7); /* Reduce image brightness */
+}
+/* Background */
+.dark-theme {
+  background-color: #1b1c1e; /* Dark background color */
+  color: #e4dddd; /* Light text color */
+}
+
+.dark-theme .portfolio-container {
+  background-color: #444; /* Darker background color for container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .column {
+  background-color: #555; /* Dark background color for columns */
+  border: 1px solid #666;
+}
+
+.dark-theme .column img {
+  filter: brightness(0.7); /* Reduce image brightness */
+}
+
 </style>
+</style>
+<script>
+	document.addEventListener('mousemove', function(event) {
+		const body = document.body;
+		const container = document.querySelector('.container');
+		const rect = container.getBoundingClientRect();
+
+		if (event.clientX < rect.left || event.clientX > rect.right ||
+			event.clientY < rect.top || event.clientY > rect.bottom) {
+			body.classList.add('dark-theme');
+		} else {
+			body.classList.remove('dark-theme');
+		}
+	});
+</script>
